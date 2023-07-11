@@ -34,6 +34,6 @@ for (const { name, ownedAssets, sharedAssets, destDir } of members) {
   console.error(`==> ${name}`)
   exec('rm', '-rf', destDir)
   exec('mkdir', '-p', destDir)
-  mergeDir(ownedAssets, destDir)
   mergeDir(sharedAssets, destDir)
+  mergeDir(ownedAssets, destDir)
 }
